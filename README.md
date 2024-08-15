@@ -6,8 +6,6 @@ For more information about the DFUC 2024 Challenge, please click [here](https://
 
 python: 3.10
 
-torch: 1.13.1
-
 numpy: 1.24.3
 
 opencv-python: 4.8.1.78
