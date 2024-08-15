@@ -4,7 +4,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import torch
-import vit_seg_configs as configs
 from sklearn.preprocessing import normalize
 import os
 import random
@@ -17,16 +16,6 @@ from sklearn.mixture import GaussianMixture
 
 torch.set_default_dtype(torch.double)
 
-CONFIGS = {
-    'ViT-B_16': configs.get_b16_config(),
-    'ViT-B_32': configs.get_b32_config(),
-    'ViT-L_16': configs.get_l16_config(),
-    'ViT-L_32': configs.get_l32_config(),
-    'ViT-H_14': configs.get_h14_config(),
-    'R50-ViT-B_16': configs.get_r50_b16_config(),
-    'R50-ViT-L_16': configs.get_r50_l16_config(),
-    'testing': configs.get_testing(),
-}
 
 # sklearn中Gaussian Mixture Models (GMM)聚类算法CPU运行   GMM使用高斯分布来建模数据点的分布，通过期望最大化（EM）算法来估计模型参数
 #kmeans = GMMCluster(n_clusters=2, max_iter=100)
